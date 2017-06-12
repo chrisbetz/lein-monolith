@@ -9,6 +9,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ...
 
+## [1.0.1] - 2017-05-22
+
+### Added
+- Metaprojects can specify an `:inherit-leaky` vector to generate a leaky
+  profile for inclusion in subprojects' built artifacts.
+
+## [1.0.0]
+
+This release marks the first stable major release of the plugin. Actual feature
+changes are small, but `lein-monolith` has seen enough production use to be
+considered a mature project.
+
+### Added
+- New `:output` option to `each` task allows saving individual subproject output
+  to separate files under the given directory.
+
+### Fixed
+- Tasks run with `each` now use the subproject's root as the working directory,
+  rather than the monolith root. [#21](https://github.com/amperity/lein-monolith/issues/21)
+
 ## [0.3.2] - 2017-03-21
 
 ### Changed
@@ -121,7 +141,9 @@ instead of loading them all before running any commands.
 
 Initial project release
 
-[Unreleased]: https://github.com/amperity/lein-monolith/compare/0.3.2...HEAD
+[Unreleased]: https://github.com/amperity/lein-monolith/compare/1.0.1...HEAD
+[1.0.1]: https://github.com/amperity/lein-monolith/compare/1.0.0...1.0.1
+[1.0.0]: https://github.com/amperity/lein-monolith/compare/0.3.2...1.0.0
 [0.3.2]: https://github.com/amperity/lein-monolith/compare/0.3.1...0.3.2
 [0.3.1]: https://github.com/amperity/lein-monolith/compare/0.3.0...0.3.1
 [0.3.0]: https://github.com/amperity/lein-monolith/compare/0.2.3...0.3.0
