@@ -24,5 +24,6 @@
 
    :project-dirs
    ["apps/app-a"
+   "apps/app-b"
     "libs/*"
     "not-found"]})
