@@ -11,7 +11,7 @@
    [org.clojure/clojurescript "1.9.293"]]
 
    :plugins [  #_ [lein-monolith "1.0.1"]
-               [lein-cljsbuild "1.1.6"]]
+               [lein-cljsbuild "1.1.7"]]
 
    :source-paths ["src/cljc"]
    :cljsbuild {:builds [{
