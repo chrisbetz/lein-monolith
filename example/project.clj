@@ -1,11 +1,15 @@
-(defproject example/all "LEIN-V-MONOLITH-SNAPSHOT"
+(defproject example/all "0.0.0"
   :description "Overarching example project."
 
   :plugins
   [[lein-monolith "1.0.1"]
    [lein-cprint "1.2.0"]
-   [com.roomkey/lein-v "6.1.0"]]
+   [com.roomkey/lein-v "6.1.0-cb"]]
 
+
+  :middleware [leiningen.v/version-from-scm
+               leiningen.v/dependency-version-from-scm
+               leiningen.v/add-workspace-data]
 
   :dependencies
   [[org.clojure/clojure "1.8.0"]]
@@ -20,7 +24,8 @@
   {:inherit [:test-selectors
              :env
              :plugins
-             :profiles]
+             :profiles
+             :middleware]
 
    :inherit-leaky
             [:repositories
