@@ -1,4 +1,4 @@
-(ns project-a.core-test
+(ns project-b.core-test
   (:require [clojure.test :refer :all]
             [project-a.core :refer :all]))
 
