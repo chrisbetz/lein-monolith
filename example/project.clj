@@ -2,6 +2,8 @@
   :description "Overarching example project."
 
   :vcs :git
+  :deploy-repositories [["releases" :clojars]]
+
 
   :plugins
   [[lein-monolith "1.0.1"]
@@ -44,9 +46,9 @@
              "libs/*"]}
 
   :release-tasks [["vcs" "assert-committed"]
-                  ["v" "update"] ;; compute new version & tag it
+                  ["v" "update"]                            ;; compute new version & tag it
                   ["vcs" "push"]
-                  ["deploy"]]
+                  ["monolith each deploy"]]
 
   :env
   {:foo "bar"})
