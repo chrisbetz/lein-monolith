@@ -48,7 +48,7 @@
   :release-tasks [["vcs" "assert-committed"]
                   ["v" "update"]                            ;; compute new version & tag it
                   ["vcs" "push"]
-                  ["monolith each deploy"]]
+                  ["monolith" "each" "deploy"]]
 
   :env
   {:foo "bar"})
