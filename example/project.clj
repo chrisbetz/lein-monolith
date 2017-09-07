@@ -34,6 +34,7 @@
    :inherit-leaky
             [:dependencies
              :repositories
+             :deploy-repositories
              :managed-dependencies]
 
    :project-selectors
