@@ -1,6 +1,8 @@
 (defproject example/all "0.0.0"
   :description "Overarching example project."
 
+  :vcs :git
+
   :plugins
   [[lein-monolith "1.0.1"]
    [lein-cprint "1.2.0"]
@@ -40,6 +42,11 @@
             ["apps/app-a"
              "apps/app-b"
              "libs/*"]}
+
+  :release-tasks [["vcs" "assert-committed"]
+                  ["v" "update"] ;; compute new version & tag it
+                  ["vcs" "push"]
+                  #_["deploy"]]
 
   :env
   {:foo "bar"})
