@@ -6,5 +6,7 @@
 
   :pedantic? :abort
 
-  :dependencies
-  [[org.clojure/clojure "1.8.0"]])
+  :plugins
+  [[lein-monolith "1.0.1"]
+   [com.roomkey/lein-v "6.1.0-cb-9-0x521a"]]
+)

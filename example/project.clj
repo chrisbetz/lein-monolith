@@ -4,11 +4,10 @@
   :plugins
   [[lein-monolith "1.0.1"]
    [lein-cprint "1.2.0"]
-   [com.roomkey/lein-v "6.1.0-cb"]]
+   [com.roomkey/lein-v "6.1.0-cb-9-0x521a"]]
 
 
   :middleware [leiningen.v/version-from-scm
-               leiningen.v/dependency-version-from-scm
                leiningen.v/add-workspace-data]
 
   :dependencies
@@ -25,10 +24,12 @@
              :env
              :plugins
              :profiles
-             :middleware]
+             :middleware
+             ]
 
    :inherit-leaky
-            [:repositories
+            [:dependencies
+             :repositories
              :managed-dependencies]
 
    :project-selectors
@@ -38,8 +39,7 @@
    :project-dirs
             ["apps/app-a"
              "apps/app-b"
-             "libs/*"
-             "not-found"]}
+             "libs/*"]}
 
   :env
   {:foo "bar"})

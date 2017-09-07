@@ -7,12 +7,11 @@
   :deployable true
 
   :dependencies
-  [[org.clojure/clojure "1.8.0"]
-   [org.clojure/clojurescript "1.9.293"]]
+  [[org.clojure/clojurescript "1.9.293"]]
 
   :plugins
   [[lein-monolith "1.0.1"]
-   [lein-cprint "1.2.0"]
+   [com.roomkey/lein-v "6.1.0-cb-9-0x521a"]
    [lein-cljsbuild "1.1.7"]]
 
   :source-paths ["src/cljc"]

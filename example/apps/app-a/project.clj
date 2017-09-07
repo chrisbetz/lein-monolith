@@ -5,19 +5,14 @@
   :monolith/inherit true
   :deployable true
 
-  :middleware [leiningen.v/version-from-scm
-               leiningen.v/dependency-version-from-scm
-               leiningen.v/add-workspace-data]
-
-
+  :middleware [leiningen.v/dependency-version-from-scm]
 
   :plugins
   [[lein-monolith "1.0.1"]
-   [lein-cprint "1.2.0"]]
+   [com.roomkey/lein-v "6.1.0-cb-9-0x521a"]]
 
 
   :dependencies
   [[commons-io "2.5"]
    [example/lib-a nil]
-   [example/lib-b nil]
-   [org.clojure/clojure "1.8.0"]])
+   [example/lib-b nil]])
