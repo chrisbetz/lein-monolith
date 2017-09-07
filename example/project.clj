@@ -46,7 +46,12 @@
   :release-tasks [["vcs" "assert-committed"]
                   ["v" "update"] ;; compute new version & tag it
                   ["vcs" "push"]
-                  #_["deploy"]]
+                  ["deploy"]]
 
   :env
   {:foo "bar"})
+
+;; release using a parameter to "lein v update"
+;;
+;;   lein release minor
+;;   lein release major
